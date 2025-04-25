@@ -6,6 +6,8 @@
     <title>Counter Program</title>
 </head>
 <body>
+    <h1>🌘</h1>
+    <h1>Counter Program</h1>
     <button id="-">-</button>  <label id="res">0</label>  <button id="+">+</button><br>
     <button id="clear">Clear</button>
 </body>
@@ -22,9 +24,16 @@
         background-color: hsl(180, 100%, 94%);
         border-radius: 5px;
     }
+    button:hover{
+        background-color: hsl(180, 45%, 88%);
+        cursor: pointer;
+    }
     *{
         font-family: 'Comic Sans MS';
         color: deepskyblue;
+    }
+    h1{
+        font-size: 1.5em;
     }
 </style>
 <script>
@@ -34,16 +43,19 @@
     const plus = document.getElementById("+")
     const res = document.getElementById("res")
 
+    function update(){
+        res.textContent = ` ${c} `
+    }
     minus.onclick = function(){
         c--
-        res.textContent = ` ${c} `
+        update()
     }
     plus.onclick = function(){
         c++
-        res.textContent = ` ${c} `
+        update()
     }
     clear.onclick = function(){
         c = 0
-        res.textContent = ` ${c} `
+        update()
     }
 </script>
