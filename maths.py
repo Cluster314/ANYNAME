@@ -36,3 +36,5 @@ circle = """         , - ~ ~ ~ - ,
      ,                  , '
        ' - , _ _ _ ,  '
 """
+def nums(s,e):
+    return range(s,e+1)
