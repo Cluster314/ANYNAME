@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS/JS web</title>
+</head>
+<body>
+    <h1 id="H1">Welcome</h1>
+    <pre>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+Quo nesciunt dignissimos totam!
+Id eligendi voluptas optio reprehenderit dolor aspernatur et voluptatibus.
+Sequi at magnam obcaecati. Ab ducimus debitis voluptatibus at.
+    </pre>
+    <button onclick="Hello()">Hello</button>
+    <p id="1"></p>
+    <button id = "1.5" onclick="Ran()">roll dice</button>
+    <p id="2"></p>
+    <input type="checkbox" id="like"></input>
+    <label for="like">You like this website</label> <button onclick="Thank()">Submit</button>
+    <p id = "3"></p>
+    <br><a href="guessing_game.html" target="_blank">Number Guessing game!</a>
+    <br><br><progress value="0" max="1000" id = "v"></progress>
+    <p id = "4">0%</p>
+</body>
+</html>
+<style>
+    body{
+        background: conic-gradient(red,yellow,green,cyan,blue,magenta,red);
+        height: 98vh;
+    }
+</style>
+<script>
+    isDivisible = (num,num2) => num%num2==0
+    window.alert("Hello!")
+    let a = window.prompt("What is ur name?").trim()
+    window.alert(`Nice to meet you, ${a}`)
+    document.getElementById("H1").textContent = `Welcome, ${a}!`
+    let b = 0
+    let speed = 1
+    function Hello(){
+        b += speed
+        document.getElementById("1").textContent = `u clicked the button ${b} times!`
+        document.getElementById("v").setAttribute("value", b)
+        document.getElementById("4").textContent = `${Math.floor(b/10)}%`
+    }
+    let sides = 6
+    function Ran(){
+        document.getElementById("1.5").textContent = `roll ${sides}-sided dice`
+     let rand = Math.floor(Math.random()*sides) + 1   
+        document.getElementById("2").textContent = rand
+    }
+    function Thank(){
+        if(document.getElementById("like").checked){
+            document.getElementById("3").textContent = "thx!"
+        }
+        else{
+            document.getElementById("3").textContent = ""
+        }
+    }
+</script>

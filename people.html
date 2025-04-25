@@ -1,0 +1,29 @@
+<html><H1 id = "1">0</H1></html>
+<script>
+function Person(firstname, lastname, age, username, favfood){
+    return {
+        FirstName: firstname,
+        LastName: lastname,
+        Age: age,
+        Username: username,
+        Gmail: `${username}@gmail.com`,
+        FavFood: favfood,
+        about: function(){return `${firstname} ${lastname}, ${age} years old.\ngmail: ${this.Gmail}`},
+        eat: function(){return `${firstname} is eating ${favfood}!`},
+        sleep: function(){return `${firstname} is sleeping!`}
+    }
+}
+let p = Person("Abdulrahman","Mohammed",9,"abdulrahmanmohammed7years","pizza with garlic sauce")
+alert(p.about())
+alert(p.eat())
+alert(p.sleep())
+let s = window.prompt("enter a number: ")
+if(s<=1000000){
+for(let i = 1; i <= s; i++){
+    function a(){document.getElementById("1").textContent = i}
+    setTimeout(a,1)
+}}
+else{
+    document.getElementById("1").textContent = "LOADING..."
+}
+</script>

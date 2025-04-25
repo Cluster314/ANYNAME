@@ -1,0 +1,23 @@
+<html style="background-color: hsl(29, 100%, 44%);"></html>
+<script>
+    let rand = Math.floor(Math.random()*20) + 1
+    window.alert("welcome to the guessing game! you have 5 tries!")
+    let guess
+    let won = false
+    for(let i = 1; i <= 5; i++){
+        guess = window.prompt("Enter random number from 1-20:")
+        if(guess != rand){
+            if(guess < rand){
+                window.alert("WRONG! HIGHER!")}
+            else{
+                window.alert("WRONG! LOWER!")}
+            }
+        else{
+            window.alert(`CORRECT! (on try #${i})\nTo Play Again, reload the page.`)
+            won = true
+            break
+        }
+    }
+    if(!won){window.alert(`BRO U LOST ALL YOUR TRIES! THE NUMBER WAS ${rand}!!!\nTo restart, reload the page.`)}
+
+</script>
