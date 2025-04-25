@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Program</title>
+</head>
+<body>
+    <button id="-">-</button>  <label id="res">0</label>  <button id="+">+</button><br>
+    <button id="clear">Clear</button>
+</body>
+</html>
+<style>
+    body{
+        text-align: center;
+        padding: 10px 10px 10px 10px;
+        font-size: 3em;
+        background-color: midnightblue;
+    }
+    button{
+        font-size: 0.75em;
+        background-color: hsl(180, 100%, 94%);
+        border-radius: 5px;
+    }
+    *{
+        font-family: 'Comic Sans MS';
+        color: deepskyblue;
+    }
+</style>
+<script>
+    let c = 0
+    const clear = document.getElementById("clear")
+    const minus = document.getElementById("-")
+    const plus = document.getElementById("+")
+    const res = document.getElementById("res")
+
+    minus.onclick = function(){
+        c--
+        res.textContent = ` ${c} `
+    }
+    plus.onclick = function(){
+        c++
+        res.textContent = ` ${c} `
+    }
+    clear.onclick = function(){
+        c = 0
+        res.textContent = ` ${c} `
+    }
+</script>
