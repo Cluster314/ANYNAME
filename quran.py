@@ -19,4 +19,4 @@ for i in get_quran_info(NO)["english"]:
 horizontal_scrollbar = Scrollbar(window, orient="horizontal", command=lb.xview)
 horizontal_scrollbar.pack(side="bottom", fill="x")
 lb.config(xscrollcommand=horizontal_scrollbar.set)
-window.mainloop()              
+window.mainloop()
